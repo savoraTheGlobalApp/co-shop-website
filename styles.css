@@ -919,6 +919,7 @@ footer {
     color: var(--primary-color, #7C3AED);
     cursor: pointer;
     margin-left: 1rem;
+    z-index: 1100;
 }
 
 /* Responsive navigation */
