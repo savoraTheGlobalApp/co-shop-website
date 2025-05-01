@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Waitlist - Co-Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="Co-Shop Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="features.html">Features</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a href="waitlist.html" class="cta-button waitlist-btn">Join Waitlist</a>
+        </nav>
+    </header>
+
+    <section class="waitlist-hero">
+        <h1>Be the First to Experience Co-Shop</h1>
+        <p>Join our waitlist and help shape the future of collaborative shopping!</p>
+    </section>
+
+    <section class="waitlist-form-section">
+        <form class="waitlist-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="role"><i class="fas fa-user-tag"></i> I am a...</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="shopper">Shopper (I want to do collaborative shopping)</option>
+                    <option value="brand">D2C Brand (I want to partner/onboard my brand)</option>
+                    <option value="influencer">Influencer/Content Creator</option>
+                    <option value="investor">Investor/VC</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group" id="brand-details-group" style="display:none;">
+                <label for="brand-details"><i class="fas fa-store"></i> Brand/Company Name</label>
+                <input type="text" id="brand-details" name="brand-details" placeholder="Your brand or company name">
+            </div>
+            <div class="form-group">
+                <label for="interest"><i class="fas fa-comment-dots"></i> What excites you about Co-Shop?</label>
+                <textarea id="interest" name="interest" rows="3" placeholder="Tell us why you want to join, or what features you'd love to see!"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="referral"><i class="fas fa-user-friends"></i> How did you hear about us?</label>
+                <input type="text" id="referral" name="referral" placeholder="e.g. Friend, Social Media, Event, etc.">
+            </div>
+            <button type="submit" class="cta-button">Book your spot</button>
+        </form>
+        <div class="waitlist-info">
+            <h3>Why Join?</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Early access to the platform</li>
+                <li><i class="fas fa-check-circle"></i> Help shape features with your feedback</li>
+                <li><i class="fas fa-check-circle"></i> Exclusive offers for early users and partners</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Your existing footer code here -->
+    </footer>
+
+    <script>
+    // Show brand/company field only if D2C Brand is selected
+    document.addEventListener('DOMContentLoaded', function() {
+        const roleSelect = document.getElementById('role');
+        const brandGroup = document.getElementById('brand-details-group');
+        roleSelect.addEventListener('change', function() {
+            if (roleSelect.value === 'brand') {
+                brandGroup.style.display = 'block';
+            } else {
+                brandGroup.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html> 
