@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
         });
     }
@@ -101,5 +101,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add your waitlist functionality here
             alert('Joining waitlist feature coming soon!');
         });
+    });
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
     });
 }); 
