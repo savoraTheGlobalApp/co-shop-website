@@ -305,25 +305,16 @@ footer {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
     }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .navbar .menu-toggle {
-        display: block;
+        display: none;
     }
-
     .hero h1 {
         font-size: 2.5rem;
     }
