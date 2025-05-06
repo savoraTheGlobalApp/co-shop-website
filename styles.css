@@ -940,4 +940,17 @@ footer {
     .waitlist-btn {
         margin-left: 0;
     }
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }  
+    .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    transition: all var(--transition-fast);
+    }
 } 
