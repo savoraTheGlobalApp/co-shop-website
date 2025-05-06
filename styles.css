@@ -940,6 +940,10 @@ footer {
     .waitlist-btn {
         margin-left: 0;
     }
+    .cta-buttons {
+        display: flex;
+        gap: var(--space-md);
+    }
     .hamburger {
         display: none;
         flex-direction: column;
